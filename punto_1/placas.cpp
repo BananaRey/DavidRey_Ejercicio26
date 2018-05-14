@@ -20,9 +20,7 @@ int main(){
  int n=512;
  double V[n][n];
  double V_old[n][n];
- double X[n][n];
- double Y[n][n];
-
+ 
 //inicializar matriz de campo
 for (int i=0;i<n;i++){
   for (int j=0;j<n ;j++){
@@ -65,35 +63,14 @@ for(int t=0; t<1000; t++){
     }
     
 }
-/**
-for(int i=0; i<n; i++){
-     for(int j=0; j<(n);j++){ 
-X[i][j]=0;
-Y[i][j]=0;
-}
-}
-¿
-//Ahora se calcula el campo electrico en sus dos componentes 
-for(int i=0; i<n; i++){
-     for(int j=0; j<(n-1);j++){       
-        X[i][j] =V[i][j]-V[i][j+1];	
-	
-   }
-	
- 	
-  }
-for(int j=0; j<n; j++){
-     for(int i=0; i<(n-1);i++){       
-        Y[i][j] =V[i][j]-V[i+1][j]; 
-	  }
-	
-  }
-**/
+
+
+
 
 
 //Se imprime el potencial y los campos
 
-/**for (int i=0;i<n;i++){
+for (int i=0;i<n;i++){
     for (int j=0;j<n;j++){  
         cout<<V[i][j]<<" ";
    }
@@ -102,16 +79,17 @@ cout<<endl;
 
 for (int i=0;i<n;i++){
     for (int j=0;j<n-1;j++){  
-        cout<<E_x[i][j]<<" ";
+        cout<<V[i][j]-V[i][j+1]<<" ";
    }
+cout<<" "<<0;
 cout<<endl;
 }
 for (int i=0;i<n-1;i++){
     for (int j=0;j<n;j++){  
-        cout<<E_y[i][j]<<" ";
+        cout<<V[i][j]-V[i+1][j]<<" ";
    }
 cout<<endl;
-}**/
+}
 return(0);
 }
 
